@@ -6,24 +6,24 @@ VIDEO FUNCIONAMIENTRO DE LA APLICACION: https://www.loom.com/share/7a4ae9cb072a4
 
 # Inventario de Productos
 
-## 1.Introduccion
+# 1.Introduccion
 Descripcion del proyecto:
 Inventario de productos, en el que podemos dar de alta, baja, modificar o buscar los productos que tengamos guardados. Implementamos tanto backend como front end.
 
 
-## 2.Configuracion y despliegue
+# 2.Configuracion y despliegue
 Para instalar el proyecto se deben abrir las dos carpetas que forman el proyecto, que corresponde a front end y back end. Se abren con un IDE y el back end lo ejecutamos primero runeando la clase UD4TareaAplicacion, y luego en el front end solo tenemos que abrir la carpeta en un IDE como visual studio y previsualizar la pagina index. Tambien habria que ejecutar la base de datos, desde los tests que tiene la aplicacion en el back end, para crear los usuarios que queramos. Cuenta ya dentro de src/test/java con una clase que crea usuarios. Ahi podemos crear nuestro usuario que se deja indicado, ejecutando dicha clase. Hay que crear el usuario que esta indicado para que funcione el front end. NOTA: si se cambia el usuario o no se crea el que ya esta en la clase test se debe modificar en el front end la llamada a la API, ya que ahi el usuario que se utiliza es el de la clase test: jose / 6824.
 
 Una vez hecho eso ya podremos ejecutar la aplicacion sin problemas.
 
 
-## 3.Arquitectura y diseño
+# 3.Arquitectura y diseño
 El patron de diseño utilizado es el MVC, con paquetes para cada una de las estructuras. Tenemos el paquete del modelo, el paquete de la aplicacion (donde solo esta la clase con un par de lineas de codigo que ejecuta y levanta todo el back end), el paquete del servicio, el paquete del repositorio y el paquete de seguridad (que es donde esta la clase que configura la seguridad de spring boot).
 
 En el front end, solo tenemos la carpeta del proyecto y dentro tenemos los dos archivos de javascript y los dos de html, y luego una hoja de estilos.
 
 
-## 4.Guia de codigo.
+# 4.Guia de codigo.
 Estructura del Proyecto
 
 El proyecto ud4Tarea sigue una estructura modular dentro de un entorno de desarrollo basado en Java, específicamente utilizando el framework Spring Boot. La estructura del proyecto está diseñada para separar las responsabilidades y facilitar el mantenimiento y la escalabilidad del código. A continuación, se detalla la estructura general del proyecto:
@@ -44,14 +44,14 @@ SecurityConfig.java: Configuración de seguridad y autenticación.
 ProductoService.java: Clase de servicio para operaciones relacionadas con productos.
 UsuarioService.java: Clase de servicio para operaciones relacionadas con usuarios.
 
-# Explicación de los Componentes Clave
+## Explicación de los Componentes Clave
 
 Los componentes clave en un proyecto de Spring Boot como este son los Modelos, Vistas y Controladores, comúnmente conocidos por su sigla en inglés MVC.
 
-# => Modelos (com.example.demo.models):
+### => Modelos (com.example.demo.models):
 Los modelos en el paquete com.example.demo.models son entidades Java que representan las estructuras de datos para la aplicación, directamente mapeadas a las tablas de la base de datos utilizando Jakarta Persistence (anteriormente conocida como Java Persistence API, JPA).
 
-# Clase Producto:
+#### Clase Producto:
 La clase Producto está anotada con @Entity, indicando que es una entidad JPA que se mapeará a una tabla en la base de datos con el mismo nombre. Los atributos de la clase Producto incluyen:
 
 - id: El identificador único para cada producto, marcado con @Id para denotar que es la clave primaria. Se genera automáticamente con la estrategia GenerationType.IDENTITY, lo que significa que la base de datos se encargará de incrementar este valor.
@@ -62,7 +62,7 @@ La clase Producto está anotada con @Entity, indicando que es una entidad JPA qu
 
 Cada uno de estos atributos está mapeado a una columna en la tabla de la base de datos. Los métodos getters y setters correspondientes permiten acceder y modificar estos atributos, respetando el principio de encapsulamiento.
 
-# Clase Usuario:
+#### Clase Usuario:
 La clase Usuario también está anotada con @Entity, lo que significa que es una entidad JPA. Sus atributos incluyen:
 
 - id: El identificador único para cada usuario, marcado con @Id. En este caso, no se especifica una estrategia de generación automática, lo que sugiere que los identificadores deben ser gestionados o asignados manualmente.
@@ -73,11 +73,11 @@ Como con la clase Producto, la clase Usuario proporciona métodos getters y sett
 
 Estos modelos juegan un papel crucial en la arquitectura de la aplicación, ya que definen la estructura de datos sobre la cual operan todas las demás capas del sistema, como los repositorios y los servicios. 
 
-# => Vistas(UD4Tarea-frontend)
+### => Vistas(UD4Tarea-frontend)
 
 Las vistas están organizadas de manera sencilla y funcional, con una clara separación entre la estructura (HTML), el diseño (CSS) y la funcionalidad interactiva (JavaScript), organizados dentro de una carpeta aparte del backend.En ellas se definen la interfaz de usuario y las interacciones del lado del cliente. Están diseñadas para interactuar con una API del backend, permitiendo realizar operaciones CRUD sobre los productos que maneje la aplicación.
 
-# Descripción de Archivos de Vistas y su Funcionalidad
+## Descripción de Archivos de Vistas y su Funcionalidad
 
 - index.html: Sirve como la página principal de la aplicación. Contiene un formulario para la entrada de datos y una tabla para la visualización de los productos. Este archivo maneja la interactividad inicial del usuario con la aplicación, como buscar, añadir, eliminar y seleccionar productos para modificar.
 
@@ -85,7 +85,7 @@ Las vistas están organizadas de manera sencilla y funcional, con una clara sepa
 
 - estilos.css: Define los estilos CSS para las páginas HTML.
 
-# Interacciones con la API
+## Interacciones con la API
 Los archivos JavaScript scriptIndex.js y scriptModificar.js son esenciales para la lógica del lado del cliente y las interacciones con la API del backend. Estos scripts gestionan las siguientes acciones:
 
 - scriptIndex.js:
@@ -100,12 +100,12 @@ Actualizar producto: Envía una petición PUT con los datos modificados para act
 
 
 
-## 5.Base de datos.
+# 5.Base de datos.
 La base de datos ud4tareainventario ha sido generada automáticamente a través de Hibernate en el marco de Spring Boot, aprovechando las anotaciones de JPA. El esquema se compone de dos tablas principales que reflejan las entidades de Producto y Usuario.
 
-# Tablas y Descripciones
+## Tablas y Descripciones
 
-# Tabla producto:
+### Tabla producto:
 
 Esta tabla almacena información sobre los productos del inventario. Las columnas y sus tipos de datos se generan a partir de la clase Producto anotada con @Entity.
 
@@ -115,7 +115,7 @@ Esta tabla almacena información sobre los productos del inventario. Las columna
 - cantidad (INT): Refleja la cantidad del producto disponible en el inventario.
 - categoria (VARCHAR): Indica la categoría a la que pertenece el producto, lo que podría utilizarse para agrupar productos de naturaleza similar.
 
-# Tabla usuario:
+### Tabla usuario:
 
 Contiene los datos de los usuarios que pueden interactuar con la aplicación. Se define por la clase Usuario también anotada con @Entity.
 
@@ -124,11 +124,11 @@ Contiene los datos de los usuarios que pueden interactuar con la aplicación. Se
 - clave (VARCHAR): Campo destinado a almacenar la clave del usuario, que, por las prácticas de seguridad observadas, parece estar almacenada en un formato hash.
 
 
-## 6.Problemas y soluciones
+# 6.Problemas y soluciones
 Los problemas que han surgido han sido con la autenticacion, ya que segui videos y tutoriales online y al ser estos más antiguos y no estar actulizados, utilizaban métodos deprecados, y entonces aunque tras crear toda la API hice que funcionase perfectamente, comprobándolo con POSTMAN, tras aplicar la securización, me funcionaba sólo un método, el get, para obtener todos los productos que se muestran en la tabla nada más iniciar la aplicacion. Pero al hacer llamadas a los otros endpoints de la API, con el mismo usuario y contraseña que sí obtienía respuesta, (el GET de todos los productos de la tabla), no funcionaba. Tras varias comeduras de cabeza y demás, acabe averiguando que era porque no tenia deshabilitado el csrf. Y tras deshabilitarlo finalmente me acabaron funcionando el resto de llamadas a los otros endpoints de la API.
 
 
-## 7. Referencias
+# 7. Referencias
 
 - [Tutorial de YouTube 1](https://www.youtube.com/watch?v=nwqQYCM4YT8&t=1091s)
 - [Tutorial de YouTube 2](https://www.youtube.com/watch?v=ksLYIavT2L0)
