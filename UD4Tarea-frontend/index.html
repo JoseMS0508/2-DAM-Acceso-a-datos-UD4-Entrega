@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Productos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="formulario-productos">
+        <div class="campo-formulario">
+            <label for="id">Id:</label>
+            <input type="text" id="id" name="id">
+        </div>
+        <div class="campo-formulario">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+        </div>
+        <div class="campo-formulario">
+            <label for="precio">Precio:</label>
+            <input type="text" id="precio" name="precio">
+        </div>
+        <div class="campo-formulario">
+            <label for="cantidad">Cantidad:</label>
+            <input type="text" id="cantidad" name="cantidad">
+        </div>
+        <div class="campo-formulario">
+            <label for="categoria">Categoría:</label>
+            <input type="text" id="categoria" name="categoria">
+        </div>
+    </div>
+    <table id="tablaProductos">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Categoría</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Los productos se insertarán aquí -->
+        </tbody>
+    </table>
+    <div class="botones-acciones">
+        <button type="button" id="btnBuscar">Buscar</button>
+        <button type="button" id="btnAñadir">Añadir</button>
+        <button type="button" id="btnEliminar">Eliminar</button>
+        <button type="button" id="btnModificar">Modificar</button>
+    </div>
+
+    <script src="scriptIndex.js"></script>
+</body>
+</html>

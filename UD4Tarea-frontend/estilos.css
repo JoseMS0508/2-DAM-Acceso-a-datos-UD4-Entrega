@@ -1,0 +1,125 @@
+/* Reset básico y estilos generales */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #3f3171; /* Fondo oscuro */
+    color: #ffffff; /* Texto claro */
+  }
+/* Estilos de la tabla de productos */
+#tablaProductos {
+    width: 90%;
+    margin-top: 40px;
+    margin-left: auto; 
+    margin-right: auto;
+    border-collapse: collapse;
+    background-color: #0b1c43; /* Fondo para las celdas de la tabla */
+  }
+  
+  #tablaProductos th,
+  #tablaProductos td {
+    text-align: left;
+    padding: 12px 20px;
+    border-bottom: 1px solid #323232; /* Borde sutil entre filas */
+  }
+  
+  #tablaProductos th {
+    background-color: #201668; /* Fondo para el encabezado de la tabla */
+    color: #cccccc;
+  }
+
+.seleccionada {
+    background-color: #aaf;
+}
+
+/* Estilos del contenedor principal y el formulario */
+.formulario-productos {
+    display: flex; /* Establece el contenedor como flex */
+    flex-direction: row; /* Alinea los hijos en fila */
+    justify-content: center; /* Alinea los hijos al inicio del contenedor */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten y pasen a la siguiente línea si no hay espacio */
+    gap: 10px; /* Espacio entre los elementos */
+    max-width: 500px;
+    margin: 20px auto;
+    margin-top: 40px;
+    background-color: #201668; /* Fondo ligeramente más claro para el formulario */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #10063e33;
+  }
+
+/* Estilos de los campos de entrada del formulario */
+.campo-formulario {
+    margin: 10px 0;
+  }
+  
+  .campo-formulario label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .campo-formulario input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+  }
+
+#nombre, #categoria, #precio, #cantidad {
+    width: 70px; /* Tamaño ligeramente más grande para nombre y categoría */
+}
+
+#id {
+    width: 30px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+
+/* Botones y acciones */
+.botones-acciones {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .botones-acciones button {
+    background-color: #201668; /* Color de botón primario */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .botones-acciones button:hover {
+    background-color: #483D8B; /* Color de botón al pasar el ratón */
+  }
+
+
+  /* Responsive design: ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .formulario-productos {
+      width: 90%;
+      padding: 10px;
+    }
+  
+    .campo-formulario input {
+      padding: 8px;
+    }
+  
+    #tablaProductos th, #tablaProductos td {
+      padding: 10px 15px;
+    }
+
+    .botones-acciones {
+        margin-top: 50px;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+  }
+  
