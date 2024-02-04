@@ -1,6 +1,7 @@
 # 2-DAM-Acceso-a-datos-UD4-Entrega
 Entrega de la unidad 4
 
+VIDEO FUNCIONAMIENTRO DE LA APLICACION: https://www.loom.com/share/7a4ae9cb072a45988f300c47b2076034?sid=12664e3c-04b0-46b2-ab1d-10b582788fe0
 
 
 # Inventario de Productos
@@ -11,7 +12,7 @@ Inventario de productos, en el que podemos dar de alta, baja, modificar o buscar
 
 
 ## 2.Configuracion y despliegue
-Para instalar el proyecto se deben abrir las dos carpetas que forman el proyecto, que corresponde a front end y back end. Se abren con un IDE y el back end lo ejecutamos primero runeando la clase UD4TareaAplicacion, y luego en el front end solo tenemos que abrir la carpeta en un IDE como visual studio y previsualizar la pagina index. Tambien habria que ejecutar la base de datos, ya que estamos ejecutando el proyecto en local lo que hara que necesitemos tener la base de datos en nuestra maquina.
+Para instalar el proyecto se deben abrir las dos carpetas que forman el proyecto, que corresponde a front end y back end. Se abren con un IDE y el back end lo ejecutamos primero runeando la clase UD4TareaAplicacion, y luego en el front end solo tenemos que abrir la carpeta en un IDE como visual studio y previsualizar la pagina index. Tambien habria que ejecutar la base de datos, desde los tests que tiene la aplicacion en el back end, para crear los usuarios que queramos. Cuenta ya dentro de src/test/java con una clase que crea usuarios. Ahi podemos crear nuestro usuario que se deja indicado, ejecutando dicha clase. Hay que crear el usuario que esta indicado para que funcione el front end. NOTA: si se cambia el usuario o no se crea el que ya esta en la clase test se debe modificar en el front end la llamada a la API, ya que ahi el usuario que se utiliza es el de la clase test: jose / 6824.
 
 Una vez hecho eso ya podremos ejecutar la aplicacion sin problemas.
 
